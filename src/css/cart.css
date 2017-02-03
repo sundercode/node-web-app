@@ -1,0 +1,25 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 5rem;
+}
+
+/* navbar css classes and custom */
+.navbar-inverse {
+  background-color: #7ec4ff
+}
+
+.navbar .navbar-header .navbar-brand {
+    color:white
+}
+
+.navbar .nav-item .nav-link {
+    color: white
+}
+
+.navbar-inverse .navbar-nav>.active>a {
+    background-color: #0067be
+}
+
+.input-group {
+    width: 160px;
+}

@@ -3,10 +3,15 @@
 const express = require('express')
 const app = express()
 const port = 3000
-var path = require('path')
+
+app.use(express.static(__dirname + '/src'));
 
 app.get('/', (request, response) => {
-  response.send('Hello from Express!')
+  response.render('index.html')
+})
+
+app.get('/cart', (request, response) => {
+  response.render('cart.html')
 })
 
 app.listen(port, (err) => {

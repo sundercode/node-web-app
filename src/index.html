@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<meta name="Home page" content="">
-	<meta name="author: Elise Sunderland, Nick Huey, Mitchell Estes" content="">
-	<!-- <link rel="icon" href="../../favicon.ico"> -->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="Home page" content="">
+		<meta name="author: Elise Sunderland, Nick Huey, Mitchell Estes" content="">
 
-	<title>Envelopost</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<title>Envelopost</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
-</head>
-<body>
+		<!-- Custom styles for this template -->
+	</head>
+	<body>
+
 	<nav class="navbar navbar-fixed-top navbar-light navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -30,7 +30,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="nav-item">
+					<li class="nav-item active">
 						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
@@ -44,54 +44,123 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#"> <span class="glyphicon glyphicon-log-in"></span> Login</a>
 					</li>
-					<li class="nav-item active">
+					<li class="nav-item">
 						<a class="nav-link" href="cart.html"> <span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<div class="container">
-	  <h2>Shopping Cart</h2>
-	  <table class="table table-hover">
-	    <thead>
-	      <tr>
-	        <th>Item</th>
-	        <th>Cost</th>
-	        <th>Quantity</th>
-	      </tr>
-	    </thead>
-	    <tbody>
-	      <tr>
-	        <td>John</td>
-	        <td>Doe</td>
-			<td><div class="input-group">
-	          <span class="input-group-btn">
-	              <button type="button" id="minus" onclick="minus()" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
-	                  <span class="glyphicon glyphicon-minus"></span>
-	              </button>
-	          </span>
-	          <input type="text" name="quant[1]" class="form-control input-number" value="1" id="count">
-	          <span class="input-group-btn">
-	              <button type="button" id="add" onclick="plus()"class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-	                  <span class="glyphicon glyphicon-plus"></span>
-	              </button>
-	          </span>
-		  </div></td>
-	      </tr>
-	      <tr>
-	        <td>Mary</td>
-	        <td>Moe</td>
-	        <td>mary@example.com</td>
-	      </tr>
-	      <tr>
-	        <td>July</td>
-	        <td>Dooley</td>
-	        <td>july@example.com</td>
-	      </tr>
-	    </tbody>
-	  </table>
-	  <button type="button" class="btn btn-success">Checkout</button>
-	</div>
-</body>
+
+
+		<!-- Carousel
+		================================================== -->
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img class="first-slide" src="http://i.imgur.com/ykWYlZG.jpg?1" alt="First slide">
+					<div class="container">
+						<div class="carousel-caption text-xs-left">
+							<h1>Envelopost</h1>
+							<h3>We have all the cards for any of your needs.</h3>
+							<p><a class="btn btn-lg btn-primary" href="#" role="button">See our Card Collection</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img class="second-slide" src="http://i.imgur.com/ykWYlZG.jpg?1" alt="Second slide">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Create personal fonts</h1>
+							<h3>Send all your cards out with a personal touch.</h3>
+							<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img class="third-slide" src="http://i.imgur.com/ykWYlZG.jpg?1" alt="Third slide">
+					<div class="container">
+						<div class="carousel-caption text-xs-right">
+							<h1>Learn more about the company. It is time to get things rolling!</h1>
+							<h3>We are dedicated to bringing the best greeting card experience to you.</h3>
+							<p><a class="btn btn-lg btn-primary" href="#" role="button">About Us</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div><!-- /.carousel -->
+
+
+		<!-- Marketing messaging and featurettes
+		================================================== -->
+		<!-- Wrap the rest of the page in another container to center all the content. -->
+
+		<div class="container marketing">
+
+			<!-- Three columns of text below the carousel -->
+			<div class="row">
+				<div class="col-lg-4">
+					<img class="img-circle" src="http://i.imgur.com/y22NjCp.jpg" alt="Generic placeholder image" width="140" height="140">
+					<h2>Greeting Cards</h2>
+					<p>Send cards to your favorite friends and family</p>
+					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+				</div><!-- /.col-lg-4 -->
+				<div class="col-lg-4">
+					<img class="img-circle" src="http://i.imgur.com/y22NjCp.jpg" alt="Generic placeholder image" width="140" height="140">
+					<h2>Genuine Experience.</h2>
+					<p>We want our users to enjoy </p>
+					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+				</div><!-- /.col-lg-4 -->
+				<div class="col-lg-4">
+					<img class="img-circle" src="http://i.imgur.com/y22NjCp.jpg" alt="Generic placeholder image" width="140" height="140">
+					<h2>Unique Fonts.</h2>
+					<p>Our users can create the fonts they write with, it's the ultimate personal touch</p>
+					<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+				</div><!-- /.col-lg-4 -->
+			</div><!-- /.row -->
+			<!-- START THE FEATURETTES -->
+
+			<hr class="featurette-divider">
+
+			<div class="row featurette">
+				<div class="col-md-7">
+					<h2 class="featurette-heading">Check out our mobile app. <span class="text-muted"> It'll blow your mind. </span></h2>
+					<p class="lead">We are dedicated to bringing the Envelopost experience to you wherever you go. Find us on the App Store.</p>
+				</div>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<div class="row featurette">
+				<div class="col-md-7 push-md-5">
+					<h2 class="featurette-heading">We're dedicated to improving your experience. <span class="text-muted"> See for yourself.</span></h2>
+					<p class="lead">Placeholder text for a future feature of the application</p>
+				</div>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<div class="row featurette">
+				<div class="col-md-7">
+					<h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+					<p class="lead">We like what we see here.</p>
+				</div>
+			</div>
+
+			<hr class="featurette-divider">
+			<footer>
+				<p class="float-xs-right"><a href="#">Back to top</a></p>
+				<p>&copy; 2016 Envelopost &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+			</footer>
+
+		</div><!-- /.container -->
+	</body>
 </html>
