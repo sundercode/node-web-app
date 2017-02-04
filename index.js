@@ -4,6 +4,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+//stripe import and secret/public keys for transaction
+//const stripe = require("stripe")(keySecret);
+
 app.use(express.static(__dirname + '/src'));
 
 app.get('/', (request, response) => {
