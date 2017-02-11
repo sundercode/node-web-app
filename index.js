@@ -4,10 +4,9 @@ const express = require('express')
 const app = express()
 
 //stripe setup objects
-const keyPublishable = process.env.PUBLISHABLE_KEY;
-const keySecret = process.env.SECRET_KEY;
+const keyPublishable = "pk_test_jH3qu1971UqR7k2rRcx3aUjg"
 
-const stripe = require("stripe")(keySecret);
+const stripe = require("stripe")("sk_test_ItkQCYuA6uoAmmb6i2gyuzoR");
 
 app.use(express.static(__dirname + '/src'));
 
