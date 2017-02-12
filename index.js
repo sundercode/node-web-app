@@ -21,9 +21,8 @@ app.get('/cart', (request, response) => {
 })
 
 app.post("/charge", (req, res) => {
-    debugger;
   let amount = 500;
-
+  console.log(res)
   stripe.customers.create({
      email: req.body.stripeEmail,
     source: req.body.stripeToken
