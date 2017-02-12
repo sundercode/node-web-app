@@ -21,6 +21,7 @@ app.get('/cart', (request, response) => {
 })
 
 app.post("/charge", (req, res) => {
+    debugger;
   let amount = 500;
 
   stripe.customers.create({
