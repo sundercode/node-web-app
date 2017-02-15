@@ -93,12 +93,16 @@
 	    </tbody>
 	  </table>
 	  <form action="/charge" method="POST">
-		  <article>
-			  <label> Amount: $5.00 <label>
-		  	  <script src="https://checkout.stripe.com/checkout.js", class="stripe-button", data-key="pk_test_jH3qu1971UqR7k2rRcx3aUjg", data-locale="auto", data-description="Sample Charge", data-amount="500"></script>
-	      </article>
+	    <script
+	      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+	      data-key="pk_test_jH3qu1971UqR7k2rRcx3aUjg"
+	      data-amount="500"
+	      data-name="Envelopost Admin"
+	      data-description="Widget"
+	      data-image="https://s3.amazonaws.com/stripe-uploads/acct_19jwwzBH6UfEKxqNmerchant-icon-1486337862313-1024.png"
+	      data-locale="auto">
+	    </script>
 	  </form>
-	  <button type="button" class="btn btn-success">Checkout</button>
 	</div>
 </body>
 </html>

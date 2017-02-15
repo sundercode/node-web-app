@@ -7,6 +7,15 @@ const app = express()
 const keyPublishable = "pk_test_jH3qu1971UqR7k2rRcx3aUjg"
 
 const stripe = require("stripe")("sk_test_ItkQCYuA6uoAmmb6i2gyuzoR");
+var charge2 = stripe.charges.create({
+  amount: 1000,
+  currency: "usd",
+  description: "Example charge - card",
+  source: token,
+}, function(err, charge2) {
+  // asynchronously called
+  console.log(err)
+});
 
 app.use(express.static(__dirname + '/src'));
 
