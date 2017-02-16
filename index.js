@@ -33,9 +33,8 @@ app.get('/cart', (request, response) => {
   response.render('cart.html', {keyPublishable})
 })
 
-app.post("/charge", (request, response) => {
+app.post("/cart", (request, response) => {
   let amount = 500;
-  //console.log(response);
   stripe.customers.create({
      email: request.body.stripeEmail,
     source: request.body.stripeToken
@@ -43,11 +42,11 @@ app.post("/charge", (request, response) => {
   .then(customer =>
     stripe.charges.create({
       amount,
-      description: "Sample Charge",
+      description: "Elise's Card charge - node.js",
          currency: "usd",
          customer: customer.id
     }))
-  .then(charge => response.render('charge.html'));
+  .then(charge => response.render('cart.html'));
 });
 
 app.listen(app.get('port'), function() {
