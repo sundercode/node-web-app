@@ -11,15 +11,6 @@ app.use(bodyParser.json());
 const keyPublishable = "pk_test_jH3qu1971UqR7k2rRcx3aUjg"
 
 const stripe = require("stripe")("sk_test_ItkQCYuA6uoAmmb6i2gyuzoR");
-// var charge2 = stripe.charges.create({
-//   amount: 1000,
-//   currency: "usd",
-//   description: "Example charge - card",
-//   source: token,
-// }, function(err, charge2) {
-//   // asynchronously called
-//   console.log(err)
-// });
 
 app.use(express.static(__dirname + '/src'));
 
@@ -33,7 +24,7 @@ app.get('/cart', (request, response) => {
   response.render('cart.html', {keyPublishable})
 })
 
-app.post("/cart", (request, response) => {
+app.post("/charge", (request, response) => {
   let amount = 500;
   stripe.customers.create({
      email: request.body.stripeEmail,
@@ -46,7 +37,12 @@ app.post("/cart", (request, response) => {
          currency: "usd",
          customer: customer.id
     }))
-  .then(charge => response.render('cart.html'));
+  .then(response.render('charge.html'));
+  //console.log(charge)
+  function errorHandler (err, req, res, next) {
+  res.status(500)
+  res.render('error', { error: err })
+}
 });
 
 app.listen(app.get('port'), function() {
