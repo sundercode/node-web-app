@@ -42,9 +42,6 @@
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="nav-item">
-						<a class="nav-link" href="#"> <span class="glyphicon glyphicon-log-in"></span> Login</a>
-					</li>
 					<li class="nav-item active">
 						<a class="nav-link" href="cart.html"> <span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>
 					</li>
@@ -64,8 +61,8 @@
 	    </thead>
 	    <tbody>
 	      <tr>
-	        <td>John</td>
-	        <td>Doe</td>
+	        <td>Birthday</td>
+	        <td>$5.00</td>
 			<td><div class="input-group">
 	          <span class="input-group-btn">
 	              <button type="button" id="minus" onclick="minus()" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
@@ -81,18 +78,42 @@
 		  </div></td>
 	      </tr>
 	      <tr>
-	        <td>Mary</td>
-	        <td>Moe</td>
-	        <td>mary@example.com</td>
+	        <td>Thank You</td>
+	        <td>$5.00</td>
+			<td><div class="input-group">
+	          <span class="input-group-btn">
+	              <button type="button" id="minus" onclick="minus()" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+	                  <span class="glyphicon glyphicon-minus"></span>
+	              </button>
+	          </span>
+	          <input type="text" name="quant[1]" class="form-control input-number" value="1" id="count">
+	          <span class="input-group-btn">
+	              <button type="button" id="add" onclick="plus()"class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+	                  <span class="glyphicon glyphicon-plus"></span>
+	              </button>
+	          </span>
+		  </div></td>
 	      </tr>
 	      <tr>
-	        <td>July</td>
-	        <td>Dooley</td>
-	        <td>july@example.com</td>
+	        <td>Sorry Card</td>
+	        <td>$5.00</td>
+			<td><div class="input-group">
+	          <span class="input-group-btn">
+	              <button type="button" id="minus" onclick="minus()" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+	                  <span class="glyphicon glyphicon-minus"></span>
+	              </button>
+	          </span>
+	          <input type="text" name="quant[1]" class="form-control input-number" value="1" id="count">
+	          <span class="input-group-btn">
+	              <button type="button" id="add" onclick="plus()"class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+	                  <span class="glyphicon glyphicon-plus"></span>
+	              </button>
+	          </span>
+		  </div></td>
 	      </tr>
 	    </tbody>
 	  </table>
-	  <form action="/charge" method="POST">
+	  <form action="" method="POST">
 	    <script
 	      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 	      data-key="pk_test_jH3qu1971UqR7k2rRcx3aUjg"

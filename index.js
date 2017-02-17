@@ -20,11 +20,19 @@ app.get('/', (request, response) => {
   response.render('index.html')
 })
 
+app.get('/browse', (request, response) => {
+  response.render('browse.html')
+})
+
+app.get('/about', (request, response) => {
+  response.render('about.html')
+})
+
 app.get('/cart', (request, response) => {
   response.render('cart.html', {keyPublishable})
 })
 
-app.post("/charge", (request, response) => {
+app.post("/cart", (request, response) => {
   let amount = 500;
   stripe.customers.create({
      email: request.body.stripeEmail,
@@ -37,12 +45,6 @@ app.post("/charge", (request, response) => {
          currency: "usd",
          customer: customer.id
     }))
-  .then(response.render('charge.html'));
-  //console.log(charge)
-  function errorHandler (err, req, res, next) {
-  res.status(500)
-  res.render('error', { error: err })
-}
 });
 
 app.listen(app.get('port'), function() {
