@@ -32,7 +32,7 @@ app.get('/cart', (request, response) => {
   response.render('cart.html', {keyPublishable})
 })
 
-app.post("/cart", (request, response) => {
+app.post('/charge', (request, response) => {
   let amount = 500;
   stripe.customers.create({
      email: request.body.stripeEmail,
@@ -45,6 +45,8 @@ app.post("/cart", (request, response) => {
          currency: "usd",
          customer: customer.id
     }))
+    console.log("post received: %s %s", request.body.stripeEmail, request.body.stripeToken);
+    response.send("POST sent to the home page")
 });
 
 app.listen(app.get('port'), function() {
