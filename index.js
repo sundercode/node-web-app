@@ -46,7 +46,7 @@ app.post('/charge', (request, response) => {
          customer: customer.id
     }))
     console.log("post received: %s %s", request.body.stripeEmail, request.body.stripeToken);
-    response.send("POST sent to the home page")
+    response.redirect('/')
 });
 
 app.listen(app.get('port'), function() {
