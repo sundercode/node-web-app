@@ -7,7 +7,7 @@ const app = express()
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-//stripe setup objects
+//stripe setup objects, new comment
 const keyPublishable = "pk_test_jH3qu1971UqR7k2rRcx3aUjg"
 
 const stripe = require("stripe")("sk_test_ItkQCYuA6uoAmmb6i2gyuzoR");
