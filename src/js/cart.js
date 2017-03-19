@@ -7,32 +7,61 @@ eventually this page will be communicating with backend files probably built
 through Node.js
 
 */
+/*
+cart.js
 
-//we will most likely be splitting this up into several small components
+This is a script that is going to handle all the actions performed on this
+page. We will be using angular to accommodate our need for a framework, and
+eventually this page will be communicating with backend files probably built
+through Node.js
 
-//cover the functionality for the counter.
-var counter = 1;
-//find the count named element on the page
-var countEl = document.getElementById("count");
-function plus() {
-    if (counter < 10) {
-        counter += 1;
-        count.value = counter;
-    }
-    else {
-        var btn = document.getElementById("add");
-        add.disabled = true;
+*/
+//cart data structure array, use the adds from inventory.js
+//var _ = require('lodash');
+var inventory = [
+    {
+        "name": "How Have You Bean?",
+        "price": 5.25,
+        "type": "Just Because"
+    },
+    {
+        "name": "Flowers",
+        "price": 5.25,
+        "type": "Just Because"
+    },
+    {
+        "name": "Toodle Loo Kangaroo",
+        "price": 5.25,
+        "type": "Greetings"
+    },
+    {
+        "name": "See you soon Racoon!",
+        "price": 5.25,
+        "type": "Greetings"
+    },
+    {
+        "name": "Thanks",
+        "price": 5.25,
+        "type": "Thank You"
+    },
+    {
+        "name": "Hello, Guten Tag",
+        "price": 5.25,
+        "type": "Greetings"
+    },
+]
+
+var cart = [];
+
+//create "Add to Cart" button functionality, use lodash?
+//if inventory[attr] =
+function add(itemName) {
+    if (inventory[itemName]) {
+        cart.append(inventory[itemName]);
     }
 }
 
-function minus() {
-    var btn = document.getElementById("minus");
-    if (counter >= 1) {
-        counter-= 1;
-        count.value = counter;
-        minus.disabled = false;
-    }
-    else {
-        minus.disabled = true;
-    }
-}
+console.log(add("How Have You Bean?"));
+console.log(add("Flowers"));
+
+//generate the table from what is in the cart. use lodash?
