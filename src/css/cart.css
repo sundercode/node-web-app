@@ -1,25 +1,17 @@
-/* Move down content because we have a fixed navbar that is 50px tall */
-body {
-  padding-top: 5rem;
+.button-hover {
+    display: inline-block;
+    opacity: 0;
+    transition: opacity .35s ease;
 }
 
-/* navbar css classes and custom */
-.navbar-inverse {
-  background-color: #7ec4ff
+.row-hover:hover .button-hover {
+    opacity: 1;
 }
 
-.navbar .navbar-header .navbar-brand {
-    color:white
+#totalStripe {
+    clear:both;
 }
 
-.navbar .nav-item .nav-link {
-    color: white
-}
-
-.navbar-inverse .navbar-nav>.active>a {
-    background-color: #0067be
-}
-
-.input-group {
-    width: 160px;
+p, div {
+    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

@@ -7,13 +7,23 @@ body {
   color: #5a5a5a;
 }
 
+footer {
+	background-color: #0fa3b1;
+    display: block;
+    text-align:center;
+    color: white;
+}
+
+p, div {
+    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 4rem;
+   margin-bottom: 4rem;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -22,7 +32,7 @@ body {
 
 /* navbar css classes and custom */
 .navbar-inverse {
-  background-color: #7ec4ff;
+  background-color: black;
 }
 
 .navbar .navbar-header .navbar-brand {
@@ -31,10 +41,16 @@ body {
 
 .navbar .nav-item .nav-link {
     color: white;
+    font-family: 'Open Sans', Georgia, Serif;
 }
 
 .navbar-inverse .navbar-nav>.active>a {
-    background-color: #0067be;
+    background-color: #0fa3b1;
+}
+
+
+.navbar .brand, .navbar .nav > li > a:hover {
+    color: #0fa3b1;
 }
 
 /* Declare heights because of positioning of img element */
@@ -63,12 +79,35 @@ body {
   margin-bottom: .25rem;
 }
 
+/* START OF Change the font/size/color of the Slider Titles */
+.carousel-caption h1 {
+font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size:      3em;
+color: white;
+text-shadow: 2px 2px 4px #000000;
+
+}
+/* Description text */
+.carousel-caption h3 {
+font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size:      2em;
+color: white;
+text-shadow: 1px 1px 4px #000000;
+}
+/* Button text */
+.carousel-caption .btn {
+font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size:      1em;
+
+}
+/* END OF Change the font/size/color of the Slider Titles */
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
+  font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -116,4 +155,70 @@ body {
   .featurette-heading {
     margin-top: 7rem;
   }
+}
+
+/* TESTS
+-------------------------------------------------- */
+
+.jumbotron2 {
+
+	background-color: #0fa3b1;
+	font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 1.42857143;
+	font-weight: 300;
+	text-align: center;
+	letter-spacing: -.05 rem;<h1 class="display-3"> {
+	font-size: 63px;</h1>
+	}
+
+}
+
+.jumbotron3 {
+	background-color: white;
+	background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 125%;
+	font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 1.42857143;
+	font-weight: 300;
+	letter-spacing: -.05 rem;<h1 class="display-3"> {
+	font-size: 63px;</h1>
+
+	}
+
+
+}
+
+/* SPACE STUFF
+-------------------------------------------------- */
+.top-buffer {
+	margin-top:5px;
+	}
+
+h6 {
+    text-align: center;
+}
+
+/* Buttons!!
+-------------------------------------------------- */
+
+.btn-primary {
+    background: #0fa3b1;
+    color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: black;
+    color: #ffffff;
+}
+
+.btn-primary:active, .btn-primary.active {
+    background: #0fa3b1;
+    box-shadow: none;
+
+.btn.sharp {
+  border-radius:0;
 }
